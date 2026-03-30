@@ -15,6 +15,8 @@ SELECT * FROM employees
 
 ALTER TABLE employees ADD COLUMN department VARCHAR
 
+UPDATE employees SET department = ('General Manager') WHERE s_no = 5
+
 DELETE FROM employees WHERE email = 'bob.s@company.com'
 
 TRUNCATE TABLE employees
@@ -23,4 +25,16 @@ DROP TABLE employees
 
 --ILIKE ignores the case
 --LIKE is case sensitive
+
 SELECT * FROM employees WHERE first_name ILIKE 'a%'
+
+SELECT first_name, salary, hire_date FROM employees ORDER BY salary DESC;
+
+SELECT * FROM employees ORDER BY first_name DESC;
+
+SELECT * FROM employees ORDER BY salary ASC;
+
+SELECT first_name AS alias_name FROM employees
+
+--contactinate
+SELECT first_name || ' ' || last_name AS fullname FROM employees 
