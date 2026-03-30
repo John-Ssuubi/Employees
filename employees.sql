@@ -4,7 +4,7 @@ first_name VARCHAR, last_name VARCHAR(50), email VARCHAR(100), salary NUMERIC, h
 --Insert
 INSERT INTO employees(first_name, last_name, email, salary, hire_date)
 VALUES
-('Alice', 'Johnson', 'j@company.com', 75000, '2023-01-15'),
+--('Alice', 'Johnson', 'j@company.com', 75000, '2023-01-15'),
 ('Bob', 'Smith', 'bob.s@company.com', 62000, '2023-03-22'),
 ('Charile', 'Brown', 'charlie.b@company.com', 58000, '2023-05-30'),
 ('Amos', 'Tyson', 'amos.t@company.com', 76000, '2023-02-18'),
@@ -38,3 +38,6 @@ SELECT first_name AS alias_name FROM employees
 
 --contactinate
 SELECT first_name || ' ' || last_name AS fullname FROM employees 
+
+--Selecting distinct records
+SELECT DISTINCT first_name FROM employees;
