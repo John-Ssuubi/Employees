@@ -40,4 +40,8 @@ SELECT first_name AS alias_name FROM employees
 SELECT first_name || ' ' || last_name AS fullname FROM employees 
 
 --Selecting distinct records
-SELECT DISTINCT first_name FROM employees;
+SELECT DISTINCT first_name, last_name FROM employees;
+
+SELECT DISTINCT ON(first_name), lastname 
+FROM employees 
+ORDER BY first_name;
